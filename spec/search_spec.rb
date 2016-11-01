@@ -1,8 +1,9 @@
 require "spec_helper"
 
 describe Orghunter::Search do
-  let(:options){
+  let(:args){
     {
+     search_term: 'cows',
      rows:    22,
      start:   1
     }
@@ -18,7 +19,7 @@ describe Orghunter::Search do
   # rows:         number    optional    Records Per Page. Default Value = 20
   # start:        number    optional    Record Set Start Position
 
-  let(:search){Orghunter::Search.new('cows', options)}
+  let(:search){Orghunter::Search.new(args)}
   let(:search_results){search.results}
 
   it 'should exist' do
