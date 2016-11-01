@@ -22,7 +22,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+API keys must be configured in the gem setup. You can do this anywhere in your application before you make API calls using the gem.
+
+Orghunter.configure do |config|
+  config.api_key = ''
+end
+config.api - your OrgHunter API key
+Getting these keys requires a (free) Orghunter account and that you agree to the terms of use for the API.
+
+The keys are available to you throughout your application as:
+
+Orghunter.configuration.api_key
 
 ## Development
 
