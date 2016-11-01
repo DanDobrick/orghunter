@@ -1,5 +1,10 @@
 require "orghunter/version"
 
 module Orghunter
-  # Your code goes here...
+  class Search
+  end
+
+  class Charity
+  end
+
 end

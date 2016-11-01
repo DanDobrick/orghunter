@@ -1,3 +1,5 @@
+require "spec_helper"
+
 describe Orghunter::Charity do 
   args = {ein: "261688229",
     charityName: "KIDS COWS AND MORE INC",

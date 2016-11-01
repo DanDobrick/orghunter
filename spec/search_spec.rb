@@ -1,3 +1,5 @@
+require "spec_helper"
+
 describe Orghunter::Search do
   let(:args){
     {search_term: 'cows',
