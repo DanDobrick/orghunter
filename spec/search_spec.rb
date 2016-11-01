@@ -2,9 +2,10 @@ require "spec_helper"
 
 describe Orghunter::Search do
   let(:args){
-    {search_term: 'cows',
-     rows:        22,
-     start:       1
+    {
+     search_term: 'cows',
+     rows:    22,
+     start:   1
     }
   }
   # user_key:     string    required    Your API Key
@@ -31,8 +32,7 @@ describe Orghunter::Search do
   end
 
   it "Has a count of the results" do
-    # Use part of the search results to get he number of records and start and stop. It's given in EACH charity for some reason.
-    expect(search.count).to be_kind_of(Integer)
+    expect(search.count).to eq(22)
   end
 
   it "Has a record start position" do
