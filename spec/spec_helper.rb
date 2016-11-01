@@ -2,7 +2,7 @@ $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 require "orghunter"
 require "vcr"
 require "httparty"
-# require 'webmock'
+
 
 ORGHUNTER_API_KEY = '3de10e9f24f7ca4c69b9e327ee6a4e68'
 
