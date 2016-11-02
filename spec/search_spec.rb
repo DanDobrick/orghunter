@@ -1,11 +1,10 @@
 require "spec_helper"
-
 describe Orghunter::Search do
   let(:term_search){ Orghunter::Search.new( {search_term: 'cows',rows: 22, start: 1} ) }
   let(:ein_search){ Orghunter::Search.new({ein: 261688229}) }
   let(:city_search){ Orghunter::Search.new({city: 'Chicago'}) }
-  let(:state_search){ Orghunter::Search.new({city: 'IL'}) }
-  let(:zip_code_search){ Orghunter::Search.new({city: '60606'}) }
+  let(:state_search){ Orghunter::Search.new({state: 'IL'}) }
+  let(:zip_code_search){ Orghunter::Search.new({zip_code: '60606'}) }
   # let(:category_search){ Orghunter::Search.new({city: 'Chicago'}) }
   let(:eligible_search){ Orghunter::Search.new({eligible: true}) }
 
@@ -38,6 +37,7 @@ describe Orghunter::Search do
 
   describe "When searching by EIN" do 
     it "builds the appropriate search string" do
+      p ein_search
       expect(ein_search.instance_variable_get(:@search_string)).to eq("http://data.orghunter.com/v1/charitysearch?user_key=#{Orghunter.configuration.api_key}&ein=261688229")
     end
 
@@ -76,7 +76,7 @@ describe Orghunter::Search do
 
   describe "When searching by zip code" do
     it "builds the appropriate search string" do
-      expect(zip_code_search.instance_variable_get(:@search_string)).to eq("http://data.orghunter.com/v1/charitysearch?user_key=#{Orghunter.configuration.api_key}&ZipCode=60606")
+      expect(zip_code_search.instance_variable_get(:@search_string)).to eq("http://data.orghunter.com/v1/charitysearch?user_key=#{Orghunter.configuration.api_key}&zipCode=60606")
     end
 
     it "returns results with the same zip_code if searching for a zip_code" do
@@ -85,13 +85,13 @@ describe Orghunter::Search do
     end
   end
 
-  describe "When searching by eligibility" do
+  describe "When searching by eligibility status" do
     it "builds the appropriate search string" do
-      expect(zip_code_search.instance_variable_get(:@search_string)).to eq("http://data.orghunter.com/v1/charitysearch?user_key=#{Orghunter.configuration.api_key}&eligibility=1")
+      expect(eligible_search.instance_variable_get(:@search_string)).to eq("http://data.orghunter.com/v1/charitysearch?user_key=#{Orghunter.configuration.api_key}&eligible=1")
     end
-    it "returns results with the same eligibility if searching for a eligibility" do
-      expect(elegibility_search.results).to not_be_empty
-      elegibility_search.results.each {|charity| expect(charity.elegibile?).to eq(true)}
+    it "returns results with the same eligibility if searching for eligible charities" do
+      expect(eligible_search.results).to not_be_empty
+      eligible_search.results.each {|charity| expect(charity.elegibile?).to eq(true)}
     end
   end
 end
