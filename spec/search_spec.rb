@@ -40,7 +40,7 @@ describe Orghunter::Search do
       end
 
       it "Returns one charity" do
-        expect(ein_search.results).to have(1).charity
+        expect(ein_search.count).to equal(1)
       end
 
       it "Returns the charity with a particular EIN" do

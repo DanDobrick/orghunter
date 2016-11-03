@@ -34,6 +34,7 @@ module Orghunter
     end
 
     def count
+      return 0 if @response_json['data'].empty?
       @response_json['data'][0]['recordCount']
     end
 
