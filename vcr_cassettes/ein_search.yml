@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://data.orghunter.com/v1/charitysearch?ein=261688229&user_key=65ebdfdcf9488a3e502a3b6aa18eb60a
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.orghunter.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 Nov 2016 20:53:29 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.45
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - laravel_session=eyJpdiI6IlwvcHhKcVJaMXQ0WEc3Y1BZYm93SkVNamh2SDdJNnYrZjZCY3pWTllpVlJNPSIsInZhbHVlIjoiSVlzSkNEaVRuOTdiSmtmbWkyalNcL1g5UU5Yd0dBK0NMcGt5Tkcwc3R4OHFjTFQzZTdXdFpjOTZibW5HNllwN3J2U0xkOW40RkFEcE5Oem1HMjJhSTlnPT0iLCJtYWMiOiIxNjZlYTQ4MmY2ZDNkMmQyNDJjM2EwZjQ3ZjExNGIxYmEzMWZkYjg0ZGJmNDQ3YTUyYTNlODc3YTdjZWNhODkzIn0%3D;
+        expires=Thu, 03-Nov-2016 22:53:29 GMT; path=/; httponly
+      Content-Type:
+      - application/json
+      X-Cache:
+      - MISS from m00180A854B18
+      X-Cache-Lookup:
+      - MISS from m00180A854B18:3128
+      Via:
+      - 1.1 m00180A854B18 (squid/3.5.19)
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"code":"200","msg":"OK, all went through!","data":[{"ein":"261688229","charityName":"KIDS
+        COWS AND MORE INC","category":"Arts, Culture and Humanities","url":"http:\/\/www.orghunter.com\/organization\/261688229","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/261688229","eligibleCd":1,"city":"HOUSTON","state":"Texas","zipCode":"77018-8305","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":1,"score":1,"website":"","missionStatement":"","acceptingDonations":1}]}'
+    http_version: 
+  recorded_at: Thu, 03 Nov 2016 21:10:31 GMT
+recorded_with: VCR 3.0.3

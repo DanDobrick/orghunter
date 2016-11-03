@@ -24,7 +24,7 @@ module Orghunter
       create_string
       response = Net::HTTP.get_response(URI(@query_url))
       response_json = JSON.parse(response.body)
-      @results = create_charities(response_json)
+      @results = create_charities(response_json['data'])
     end
 
     def create_charities(charity_hashes)

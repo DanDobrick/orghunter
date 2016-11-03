@@ -2,54 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://data.orghunter.com/v1/charitysearch?rows=22&searchTerm=cows&start=1&user_key=
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-      Host:
-      - data.orghunter.com
-  response:
-    status:
-      code: 403
-      message: Forbidden
-    headers:
-      Date:
-      - Thu, 03 Nov 2016 20:10:03 GMT
-      Server:
-      - Apache/2.2.15 (CentOS)
-      X-Powered-By:
-      - PHP/5.4.45
-      Cache-Control:
-      - no-cache
-      X-Frame-Options:
-      - SAMEORIGIN
-      Set-Cookie:
-      - laravel_session=eyJpdiI6IncybWkrbGt5QlR4VDd3K1ZsZmkzQm52bzdhWEJMaTlONU1JVTlsaWJXT009IiwidmFsdWUiOiJVdXNJOUI0bGdCY09WRWlmVUxHSTF1akE0YlNpTWJXc0pFSWpubzR5UDh6WUFpcjNBR2htMlY2XC9lbGdsSTZDTHVnMFJyXC8xXC9GZkgydTVJZVVMbUpVUT09IiwibWFjIjoiMmNjZTljOWQ3MDQ0ZDkwM2NkNDM1Y2FlOGNhZGVjYTdjYjdhMWRiZDM3MjQ0OGEwMzM0MGE3ZTc2YTRiMzYxZiJ9;
-        expires=Thu, 03-Nov-2016 22:10:08 GMT; path=/; httponly
-      Content-Type:
-      - application/json
-      X-Cache:
-      - MISS from m00180A854B18
-      X-Cache-Lookup:
-      - MISS from m00180A854B18:3128
-      Via:
-      - 1.1 m00180A854B18 (squid/3.5.19)
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"code":"403","msg":"Unauthorized"}'
-    http_version: 
-  recorded_at: Thu, 03 Nov 2016 20:27:10 GMT
-- request:
-    method: get
     uri: http://data.orghunter.com/v1/charitysearch?rows=22&searchTerm=cows&start=1&user_key=65ebdfdcf9488a3e502a3b6aa18eb60a
     body:
       encoding: US-ASCII

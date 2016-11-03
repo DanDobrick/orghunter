@@ -12,11 +12,10 @@ VCR.configure do |c|
   # config.default_cassette_options = { record: :once }   
 end
 
-
-RSpec.configure do |config|
-  config.before(:all) do 
-    Orghunter.configure do |config|
-      config.api_key = ENV['ORGHUNTER_API_KEY']
-    end
-  end  
-end
+# RSpec.configure do |config|
+#   config.before(:each) do 
+#     Orghunter.configure do |config|
+#       config.api_key = ENV['ORGHUNTER_API_KEY']
+#     end
+#   end  
+# end
