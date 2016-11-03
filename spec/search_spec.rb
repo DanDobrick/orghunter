@@ -46,7 +46,7 @@ describe Orghunter::Search do
       it "Returns the charity with a particular EIN" do
         returned_charity = ein_search.results[0]
         expect(returned_charity).to be_kind_of(Orghunter::Charity)
-        expect(returned_charity.ein).to eq(261688229)
+        expect(returned_charity.ein).to eq('261688229')
       end
     end
   end
@@ -105,7 +105,7 @@ describe Orghunter::Search do
       end
       it "returns results with the correct eligibility" do
         expect(eligible_search.results).to_not be_empty
-        eligible_search.results.each {|charity| expect(charity.elegibile?).to eq(true)}
+        eligible_search.results.each {|charity| expect(charity.eligible?).to eq(true)}
       end
     end
   end
