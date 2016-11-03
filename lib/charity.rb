@@ -1,6 +1,6 @@
 module Orghunter
   class Charity
-    attr_reader :name, :category, :org_hunter_URL, :donation_URL, :city, :state, :zip_code, :status, :search_score, :website, :mission
+    attr_reader :name, :category, :org_hunter_URL, :donation_URL, :city, :state, :zip_code, :status, :search_score, :website, :mission, :ein
 
     def initialize(args)
       @name = args["charityName"]
@@ -17,6 +17,7 @@ module Orghunter
       @website = args["website"]
       @mission = args["missionStatement"]
       @accepting_donations = args["acceptingDonations"]
+      @ein = args["ein"]
     end
 
     def deductable?
