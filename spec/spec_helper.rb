@@ -1,14 +1,17 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 require "orghunter"
+require 'pry'
 require "vcr"
-require "httparty"
+# require 'webmock/rspec'  
+# WebMock.disable_net_connect!(allow_localhost: true)  
 
 
-VCR.configure do |config|
-  config.cassette_library_dir = "../test/fixtures/cassettes"
-  config.hook_into :webmock # or :fakeweb
-  config.default_cassette_options = { record: :once }   
+VCR.configure do |c|
+  c.cassette_library_dir = 'vcr_cassettes'
+  c.hook_into :webmock
+  # config.default_cassette_options = { record: :once }   
 end
+
 
 RSpec.configure do |config|
   config.before(:all) do 
