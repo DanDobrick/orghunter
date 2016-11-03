@@ -1,5 +1,3 @@
-require 'json'
-
 module Orghunter
   class Search
     attr_reader :results

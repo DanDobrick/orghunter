@@ -1,9 +1,5 @@
 # Orghunter
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/orghunter`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -24,15 +20,19 @@ Or install it yourself as:
 
 API keys must be configured in the gem setup. You can do this anywhere in your application before you make API calls using the gem.
 
+```ruby
 Orghunter.configure do |config|
-  config.api_key = ''
+  config.api_key = YOUR_KEY_HERE
 end
-config.api - your OrgHunter API key
+```
+
 Getting these keys requires a (free) Orghunter account and that you agree to the terms of use for the API.
 
 The keys are available to you throughout your application as:
 
+```ruby
 Orghunter.configuration.api_key
+```
 
 ## Development
 
