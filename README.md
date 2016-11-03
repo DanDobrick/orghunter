@@ -38,10 +38,11 @@ Orghunter.configuration.api_key
 
 1. Fork the repo on GitHub.
 2. Clone the project to your own machine
-3. Run `bundle && bundle exec rake', you will need an API key for tests to work.
-4. Commit changes to your own branch
-5. Push your work back up to your fork
-6. Submit a Pull request so that we can review your changes
+3. Add you API key to the cassettes
+4. Run `bundle && bundle exec rake', you will need an API key for tests to work.
+5. Commit changes to your own branch
+6. Push your work back up to your fork
+7. Submit a Pull request so that we can review your changes
 
 NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 
