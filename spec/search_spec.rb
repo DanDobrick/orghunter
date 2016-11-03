@@ -5,12 +5,6 @@ describe Orghunter::Search do
     config.api_key = ENV['ORGHUNTER_API_KEY']
   end
 
-  #   let(:ein_search){ Orghunter::Search.new({ein: 261688229}) }
-  #   let(:city_search){ Orghunter::Search.new({city: 'Chicago'}) }
-  #   let(:state_search){ Orghunter::Search.new({state: 'IL'}) }
-  #   let(:zip_code_search){ Orghunter::Search.new({zip_code: '60606'}) }
-  #   # let(:category_search){ Orghunter::Search.new({city: 'Chicago'}) }
-  #   let(:eligible_search){ Orghunter::Search.new({eligible: true}) }
   VCR.use_cassette('cow_search') do
 
     term_search = Orghunter::Search.new( {search_term: 'cows',rows: 22, start: 1} )
@@ -21,7 +15,7 @@ describe Orghunter::Search do
       term_search.results.each{|charity| expect(charity).to be_kind_of(Orghunter::Charity)}
     end
     it "Has a count of the results" do
-      expect(term_search.count).to eq(22)
+      expect(term_search.count).to eq(85)
     end
 
     it "Has a record start position" do
@@ -46,7 +40,7 @@ describe Orghunter::Search do
       end
 
       it "Returns one charity" do
-        expect(ein_search.results).to have(1).charity
+        expect(ein_search.count).to equal(1)
       end
 
       it "Returns the charity with a particular EIN" do
@@ -112,6 +106,20 @@ describe Orghunter::Search do
       it "returns results with the correct eligibility" do
         expect(eligible_search.results).to not_be_empty
         eligible_search.results.each {|charity| expect(charity.elegibile?).to eq(true)}
+      end
+    end
+  end
+
+  describe "Where there are NO search results" do
+    VCR.use_cassette('no_results') do
+      no_results = Orghunter::Search.new({search_term: 'hjnkoihjbnklmjoiuhjbnkloijuhjb'})
+
+      it "has a count of zero" do
+        expect(no_results.count).to eq(0)
+      end
+
+      it "has an empty array for results" do
+        expect(no_results.results).to eq([])
       end
     end
   end
