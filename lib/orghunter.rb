@@ -1,7 +1,7 @@
-require 'configuration'
 require "orghunter/version"
-require 'charity'
-require 'search'
+require 'orghunter/configuration'
+require 'orghunter/charity'
+require 'orghunter/search'
 
 
 module Orghunter
