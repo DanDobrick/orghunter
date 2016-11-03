@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://data.orghunter.com/v1/charitysearch?ein=261688229&user_key=65ebdfdcf9488a3e502a3b6aa18eb60a
+    uri: http://data.orghunter.com/v1/charitysearch?ein=261688229&user_key=YOUR_API_KEY
     body:
       encoding: US-ASCII
       string: ''
