@@ -60,8 +60,8 @@ describe Orghunter::Search do
       end
 
       it "returns results with the correct city" do
-        expect(city_search.results).to not_be_empty
-        city_search.results.each {|charity| expect(charity.city).to eq('Chicago')}
+        expect(city_search.results).to_not be_empty
+        city_search.results.each {|charity| expect(charity.city).to eq('CHICAGO')}
       end
     end
   end
@@ -75,8 +75,8 @@ describe Orghunter::Search do
       end
 
       it "returns results with the correct state" do
-        expect(state_search.results).to not_be_empty
-        state_search.results.each {|charity| expect(charity.state).to eq('IL')}
+        expect(state_search.results).to_not be_empty
+        state_search.results.each {|charity| expect(charity.state).to eq('Illinois')}
       end
     end
   end
@@ -90,8 +90,8 @@ describe Orghunter::Search do
       end
 
       it "returns results with the correct zip code" do
-        expect(zip_code_search.results).to not_be_empty
-        zip_code_search.results.each {|charity| expect(charity.zip_code).to eq('Chicago')}
+        expect(zip_code_search.results).to_not be_empty
+        zip_code_search.results.each {|charity| expect(charity.zip_code).to match(/60606/)}
       end
     end
   end
@@ -104,7 +104,7 @@ describe Orghunter::Search do
         expect(eligible_search.instance_variable_get(:@query_url)).to eq("http://data.orghunter.com/v1/charitysearch?user_key=#{Orghunter.configuration.api_key}&eligible=1")
       end
       it "returns results with the correct eligibility" do
-        expect(eligible_search.results).to not_be_empty
+        expect(eligible_search.results).to_not be_empty
         eligible_search.results.each {|charity| expect(charity.elegibile?).to eq(true)}
       end
     end
