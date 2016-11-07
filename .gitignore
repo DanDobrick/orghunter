@@ -8,5 +8,5 @@
 /spec/reports/
 /tmp/
 .env
-/vcr_cassettes/*.yml
+vcr_cassettes/*.yml
 *.gem
