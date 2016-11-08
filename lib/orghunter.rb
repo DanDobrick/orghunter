@@ -2,6 +2,7 @@ require "orghunter/version"
 require 'orghunter/configuration'
 require 'orghunter/charity'
 require 'orghunter/search'
+require 'orghunter/category'
 
 
 module Orghunter
