@@ -1,0 +1,80 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://data.orghunter.com/v1/charitysearch?user_key=YOUR_API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - data.orghunter.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 08 Nov 2016 21:53:42 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      X-Powered-By:
+      - PHP/5.4.45
+      Cache-Control:
+      - no-cache
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - laravel_session=eyJpdiI6IjRrcllUZDd3S3hwSFhTOWl6dHE5OGszcjkwQkp2NGV6VzE3Tmdob1wvdjZjPSIsInZhbHVlIjoialZLS053MVo5QlpLbG5tUUIxWUlKMkdtM215UTJMRnRlbE9PSHNlRTIwSFZpWWN0VXl6SUdHMnh4Zzl2bUdEUFJLbVV3K2NyQlpQOTNJUnMrMTczT3c9PSIsIm1hYyI6IjI5YTNmY2Y0NDdkZDk2N2UwYzY0MzAxZmJlYTEyMjBhODExZWVkZGY3Mjk4MjVkOTZmZjRjZGU3NmI0ZTVjNGQifQ%3D%3D;
+        expires=Tue, 08-Nov-2016 23:53:47 GMT; path=/; httponly
+      Content-Type:
+      - application/json
+      X-Cache:
+      - MISS from m00180A854B18
+      X-Cache-Lookup:
+      - MISS from m00180A854B18:3128
+      Via:
+      - 1.1 m00180A854B18 (squid/3.5.19)
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"code":"200","msg":"OK, all went through!","data":[{"ein":"610927987","charityName":"PADUCAH
+        INTERNATIONAL AUTO RACING","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/610927987","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/610927987","eligibleCd":0,"city":"PADUCAH","state":"Kentucky","zipCode":"42003-5525","deductibilityCd":0,"statusCd":4,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":0},{"ein":"223051022","charityName":"YOUNG
+        SCHOLARS INSTITUTE INC","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/223051022","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/223051022","eligibleCd":1,"city":"TRENTON","state":"New
+        Jersey","zipCode":"08618-5705","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"470646854","charityName":"EMERSON
+        SENIOR CITIZENS","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/470646854","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/470646854","eligibleCd":1,"city":"EMERSON","state":"Nebraska","zipCode":"68733-0000","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"223200741","charityName":"BLUE
+        KNIGHTS MOTORCYCLE CLUB","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/223200741","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/223200741","eligibleCd":0,"city":"BIG
+        BEAR CITY","state":"California","zipCode":"92314-9545","deductibilityCd":0,"statusCd":4,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":0},{"ein":"941164687","charityName":"TEHAMA
+        COUNTY FARM BUREAU","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/941164687","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/941164687","eligibleCd":0,"city":"RED
+        BLUFF","state":"California","zipCode":"96080-2938","deductibilityCd":2,"statusCd":0,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":0},{"ein":"800616688","charityName":"SPIRITUAL
+        ASSEMBLY OF THE BAHAIS OF PORT SAINT LUCIE","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/800616688","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/800616688","eligibleCd":1,"city":"PORT
+        ST LUCIE","state":"Florida","zipCode":"34953-5494","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"454042953","charityName":"K
+        VAUGHAN INDUSTRIES CORPORATION","category":"Community Improvement, Capacity
+        Building","url":"http:\/\/www.orghunter.com\/organization\/454042953","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/454042953","eligibleCd":1,"city":"KILLEEN","state":"Texas","zipCode":"76547-0571","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"131931409","charityName":"BULGARIAN
+        NATIONAL COMMITTEE","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/131931409","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/131931409","eligibleCd":0,"city":"NEW
+        YORK","state":"New York","zipCode":"10011-4311","deductibilityCd":0,"statusCd":4,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":0},{"ein":"237174208","charityName":"LELAND-KENMORE
+        WELFARE RIGHTS","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/237174208","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/237174208","eligibleCd":0,"city":"CHICAGO","state":"Illinois","zipCode":"60640-5027","deductibilityCd":0,"statusCd":4,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":0},{"ein":"710954514","charityName":"HUNTSVILLE-MADISON
+        COUNTY ATHLETIC HALL OF FAME INC","category":"Arts, Culture and Humanities","url":"http:\/\/www.orghunter.com\/organization\/710954514","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/710954514","eligibleCd":1,"city":"HUNTSVILLE","state":"Alabama","zipCode":"35804-0566","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"680063767","charityName":"SOROPTIMIST
+        INTERNATIONAL OF THE AMERICAS INC","category":"Crime, Legal-Related","url":"http:\/\/www.orghunter.com\/organization\/680063767","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/680063767","eligibleCd":1,"city":"MENDOCINO","state":"California","zipCode":"95460-1704","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"237015943","charityName":"THE
+        CONTEMPORARY CLUB","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/237015943","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/237015943","eligibleCd":0,"city":"BALTIMORE","state":"Maryland","zipCode":"21204-3509","deductibilityCd":0,"statusCd":4,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":0},{"ein":"610948840","charityName":"PURCHASE
+        PLAYERS INC","category":"Arts, Culture and Humanities","url":"http:\/\/www.orghunter.com\/organization\/610948840","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/610948840","eligibleCd":1,"city":"MAYFIELD","state":"Kentucky","zipCode":"42066-0015","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"886007145","charityName":"PI
+        MU EPSILON INC","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/886007145","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/886007145","eligibleCd":1,"city":"RENO","state":"Nevada","zipCode":"89557-0001","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"650735017","charityName":"SCHNEER
+        FOUNDATION INC","category":"Philanthropy, Voluntarism and Grantmaking Foundations","url":"http:\/\/www.orghunter.com\/organization\/650735017","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/650735017","eligibleCd":1,"city":"BOCA
+        RATON","state":"Florida","zipCode":"33486-1070","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"363576023","charityName":"CHURCH
+        OF GOD OF PROPHECY","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/363576023","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/363576023","eligibleCd":1,"city":"ZION","state":"Illinois","zipCode":"60099-1665","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"581900237","charityName":"SELMAN
+        FIELD HISTORICAL ASSOCIATION CORPORATION","category":"Arts, Culture and Humanities","url":"http:\/\/www.orghunter.com\/organization\/581900237","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/581900237","eligibleCd":1,"city":"MONROE","state":"Louisiana","zipCode":"71201-5716","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"561997682","charityName":"TRIANGLE
+        CURLING CLUB OF NORTH CAROLINA","category":"Recreation, Sports, Leisure, Athletics","url":"http:\/\/www.orghunter.com\/organization\/561997682","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/561997682","eligibleCd":1,"city":"DURHAM","state":"North
+        Carolina","zipCode":"27709-4628","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1},{"ein":"260152160","charityName":"SILVER
+        LINING FOUNDATION INC","category":"Not Provided","url":"http:\/\/www.orghunter.com\/organization\/260152160","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/260152160","eligibleCd":0,"city":"AUSTIN","state":"Texas","zipCode":"78749-1982","deductibilityCd":0,"statusCd":4,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":0},{"ein":"270842956","charityName":"WESCOTT
+        ACRES PET RESCUE","category":"Animal-Related","url":"http:\/\/www.orghunter.com\/organization\/270842956","donationUrl":"http:\/\/donate.makemydonation.org\/donate\/270842956","eligibleCd":1,"city":"COLUMBIA","state":"South
+        Carolina","zipCode":"29212-1408","deductibilityCd":1,"statusCd":1,"start":0,"rows":20,"recordCount":2208102,"score":1,"website":"","missionStatement":"","acceptingDonations":1}]}'
+    http_version: 
+  recorded_at: Tue, 08 Nov 2016 22:11:06 GMT
+recorded_with: VCR 3.0.3
