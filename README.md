@@ -1,4 +1,4 @@
-# Orghunter
+# Orghunter [![Gem Version](https://badge.fury.io/rb/orghunter.svg)](https://badge.fury.io/rb/orghunter)
 
 ## Installation
 
