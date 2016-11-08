@@ -1,7 +1,7 @@
 require "spec_helper"
 
 describe Orghunter::Category do
-  let(:category){Orghunter::Category.new( {'categoryid' => 'A','categoryDesc' => "Arts, Culture and Humanities"} )}
+  let(:category){Orghunter::Category.new( {'categoryId' => 'A','categoryDesc' => "Arts, Culture and Humanities"} )}
 
   it 'should exist' do
     expect(category).to be_kind_of(Orghunter::Category)
@@ -14,5 +14,4 @@ describe Orghunter::Category do
   it 'has readable description' do
     expect(category.description).to eq('Arts, Culture and Humanities')
   end
-
 end
