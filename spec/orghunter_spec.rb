@@ -46,7 +46,9 @@ describe Orghunter do
 
     describe "When querying for something with no results" do
       VCR.use_cassette('basic_info_no_results') do
-        xit 'returns something' do
+        no_charity_info = Orghunter.basic_info('99999999')
+        it 'returns a string notifying lack of results' do
+          expect(no_charity_info).to eq('No results for ein: 99999999')
         end
       end
     end
