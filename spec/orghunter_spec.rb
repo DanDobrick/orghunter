@@ -1,6 +1,10 @@
 require "spec_helper"
 
 describe Orghunter do
+  Orghunter.configure do |config|
+    config.api_key = ENV['ORGHUNTER_API_KEY']
+  end
+  
   it "has a version number" do
     expect(Orghunter::VERSION).not_to be nil
   end
@@ -19,4 +23,27 @@ describe Orghunter do
         end
       end
   end
+
+  describe 'When making a valid query' do
+    VCR.use_cassette('basic_info_with_results') do
+      charity_info = Orghunter.basic_info('261688229')
+
+      it "returns a single charity" do
+        expect(charity_info).to be_kind_of Orghunter::Charity
+      end
+
+      it 'returns the charity with the correct ein' do
+        expect(charity_info.ein).to eq('261688229')
+      end
+
+    end
+  end
+
+  describe "When querying for something with no results" do
+    VCR.use_cassette('basic_info_no_results') do
+      xit 'returns something' do
+      end
+    end
+  end
+
 end
