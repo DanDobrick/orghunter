@@ -36,7 +36,11 @@ module Orghunter
   def self.basic_info(ein)
     uri = "http://data.orghunter.com/v1/charitybasic?user_key=#{Orghunter.configuration.api_key}&ein=#{ein}"
     charity_hash = self.data_from_query(uri)
-    Charity.new(charity_hash)
+    if charity_hash
+      return Charity.new(charity_hash)
+    else
+      return "No results for ein: #{ein}"
+    end
   end
 
 
