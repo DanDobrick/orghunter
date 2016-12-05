@@ -7,5 +7,6 @@
 /pkg/
 /spec/reports/
 /tmp/
+/vcr_cassettes/
 .env
 *.gem
